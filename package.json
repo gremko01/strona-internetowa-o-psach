@@ -1,0 +1,9 @@
+{
+  "name": "basic-website",
+  "version": "1.0.0",
+  "description": "A basic static website project.",
+  "scripts": {
+    "start": "npx serve -l 3000"
+  },
+  "devDependencies": {}
+}
