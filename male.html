@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Małe Psy - Encyklopedia Psów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Encyklopedia Psów</h1>
+        <h2>Małe psy</h2>
+        <nav class="size-tabs">
+            <a class="tab" href="male.html">małe psy</a>
+            <a class="tab" href="srednie.html">średnie psy</a>
+            <a class="tab" href="duze.html">duże psy</a>
+        </nav>
+    </header>
+    <main>
+        <p>Tu znajdziesz informacje o małych rasach psów.</p>
+        <section class="breed-section">
+            <img id="dog-image-pomeranian" src="" alt="Pomeranian" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Pomeranian</h3>
+            <p><strong>Opis:</strong> Pomeranian (szpic miniaturowy) to bardzo mały, puszysty pies o żywym temperamencie. Jest inteligentny, odważny i bardzo przywiązany do właściciela.</p>
+            <p><strong>Ciekawostka:</strong> Pomeraniany są znane z tego, że potrafią szczekać głośniej niż niektóre dużo większe psy!</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-chihuahua" src="" alt="Chihuahua" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Chihuahua</h3>
+            <p><strong>Opis:</strong> Chihuahua to najmniejsza rasa psa na świecie. Jest energiczny, odważny i bardzo przywiązany do swojego opiekuna.</p>
+            <p><strong>Ciekawostka:</strong> Mimo niewielkich rozmiarów, chihuahua często zachowuje się jak pies stróżujący i potrafi być bardzo czujny.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-papillon" src="" alt="Papillon" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Papillon</h3>
+            <p><strong>Opis:</strong> Papillon to mały, elegancki pies o charakterystycznych, motylkowatych uszach. Jest bardzo inteligentny, energiczny i przyjazny.</p>
+            <p><strong>Ciekawostka:</strong> Nazwa rasy pochodzi od francuskiego słowa "papillon", oznaczającego motyla, ze względu na kształt uszu.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-pug" src="" alt="Mops" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Mops</h3>
+            <p><strong>Opis:</strong> Mops to mały pies o krępej budowie i charakterystycznej, pomarszczonej mordce. Jest wesoły, towarzyski i bardzo oddany rodzinie.</p>
+            <p><strong>Ciekawostka:</strong> Mopsy były ulubieńcami chińskich cesarzy i często mieszkały w pałacach.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-toy-poodle" src="" alt="Toy Poodle" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Pudel miniaturowy (Toy Poodle)</h3>
+            <p><strong>Opis:</strong> Pudel miniaturowy to bardzo inteligentny, energiczny i przyjazny pies. Słynie z łatwości w nauce i wyjątkowej lojalności wobec właściciela.</p>
+            <p><strong>Ciekawostka:</strong> Pudle miniaturowe są często wykorzystywane w cyrkach ze względu na swoją inteligencję i chęć do nauki sztuczek.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-yorkie" src="" alt="Yorkshire Terrier" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Yorkshire Terrier</h3>
+            <p><strong>Opis:</strong> Yorkshire Terrier to mały, długowłosy pies o odważnym charakterze. Jest bardzo energiczny i przywiązany do właściciela.</p>
+            <p><strong>Ciekawostka:</strong> Yorki były pierwotnie wykorzystywane do tępienia szczurów w angielskich kopalniach.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-maltese" src="" alt="Maltańczyk" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Maltańczyk</h3>
+            <p><strong>Opis:</strong> Maltańczyk to mały piesek o śnieżnobiałej sierści. Jest bardzo łagodny, inteligentny i uwielbia towarzystwo ludzi.</p>
+            <p><strong>Ciekawostka:</strong> Maltańczyki były znane już w starożytności i były ulubieńcami arystokracji.</p>
+        </section>
+        <script>
+        fetch('https://dog.ceo/api/breed/pomeranian/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-pomeranian').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/chihuahua/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-chihuahua').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/papillon/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-papillon').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/pug/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-pug').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/poodle/toy/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-toy-poodle').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/terrier/yorkshire/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-yorkie').src = data.message;
+            })
+            .catch(() => {
+                document.getElementById('dog-image-yorkie').alt = 'Brak zdjęcia';
+            });
+        fetch('https://dog.ceo/api/breed/maltese/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-maltese').src = data.message;
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2023 Encyklopedia Psów</p>
+    </footer>
+</body>
+</html>

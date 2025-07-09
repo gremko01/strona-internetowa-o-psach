@@ -20,3 +20,25 @@ button {
     font-size: 1em;
     cursor: pointer;
 }
+.size-tabs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.size-tabs .tab {
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    padding: 10px 24px;
+    background: #fff;
+    color: #222;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px #e0e0e0;
+}
+.size-tabs .tab:hover, .size-tabs .tab:focus {
+    background: #4a90e2;
+    color: #fff;
+    outline: none;
+}

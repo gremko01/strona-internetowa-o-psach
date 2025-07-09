@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duże Psy - Encyklopedia Psów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Encyklopedia Psów</h1>
+        <h2>Duże psy</h2>
+        <nav class="size-tabs">
+            <a class="tab" href="male.html">małe psy</a>
+            <a class="tab" href="srednie.html">średnie psy</a>
+            <a class="tab" href="duze.html">duże psy</a>
+        </nav>
+    </header>
+    <main>
+        <p>Tu znajdziesz informacje o dużych rasach psów.</p>
+        <!-- Przykładowa rasa -->
+        <!-- <section class="breed-section">...</section> -->
+        <section class="breed-section">
+            <img id="dog-image-greatdane" src="" alt="Dog niemiecki" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Dog niemiecki (Great Dane)</h3>
+            <p><strong>Opis:</strong> Dog niemiecki to jedna z największych ras psów na świecie. Jest łagodny, przyjacielski i bardzo oddany rodzinie.</p>
+            <p><strong>Ciekawostka:</strong> Najwyższy pies świata, Zeus, był właśnie dogiem niemieckim i mierzył ponad 1 metr w kłębie!</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-mastiff" src="" alt="Mastiff" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Mastiff angielski</h3>
+            <p><strong>Opis:</strong> Mastiff angielski to potężny, spokojny i bardzo lojalny pies. Jest znany z łagodnego usposobienia wobec rodziny.</p>
+            <p><strong>Ciekawostka:</strong> Mastiffy były wykorzystywane w starożytnym Rzymie jako psy bojowe i stróżujące.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-leonberger" src="" alt="Leonberger" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Leonberger</h3>
+            <p><strong>Opis:</strong> Leonberger to duży, majestatyczny pies o łagodnym charakterze. Jest doskonałym psem rodzinnym i stróżującym.</p>
+            <p><strong>Ciekawostka:</strong> Leonbergery były hodowane, by przypominać lwa z herbu miasta Leonberg w Niemczech.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-newfoundland" src="" alt="Nowofundland" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Nowofundland (Newfoundland)</h3>
+            <p><strong>Opis:</strong> Nowofundland to pies o imponującej sile i łagodnym sercu. Słynie z umiejętności ratowania ludzi z wody.</p>
+            <p><strong>Ciekawostka:</strong> Nowofundlandy mają błoniaste łapy, które pomagają im świetnie pływać.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-bernese" src="" alt="Berneński pies pasterski" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Berneński pies pasterski (Bernese Mountain Dog)</h3>
+            <p><strong>Opis:</strong> Berneński pies pasterski to duży, silny i bardzo przyjazny pies rodzinny. Jest łagodny wobec dzieci i innych zwierząt.</p>
+            <p><strong>Ciekawostka:</strong> Berneńczyki były wykorzystywane do ciągnięcia wózków z mlekiem w Szwajcarii.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-alaskanmalamute" src="" alt="Alaskan Malamute" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Alaskan Malamute</h3>
+            <p><strong>Opis:</strong> Alaskan Malamute to silny, wytrzymały pies zaprzęgowy. Jest przyjacielski, lojalny i bardzo energiczny.</p>
+            <p><strong>Ciekawostka:</strong> Malamuty były wykorzystywane przez Inuitów do ciągnięcia ciężkich ładunków na dalekiej północy.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-saintbernard" src="" alt="Bernardyn" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Bernardyn (Saint Bernard)</h3>
+            <p><strong>Opis:</strong> Bernardyn to ogromny, łagodny pies ratowniczy. Jest znany z pomocy podróżnym w Alpach.</p>
+            <p><strong>Ciekawostka:</strong> Bernardyny były wykorzystywane do ratowania ludzi zasypanych przez lawiny w Alpach szwajcarskich.</p>
+        </section>
+        <script>
+        fetch('https://dog.ceo/api/breed/dane/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-greatdane').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/mastiff/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-mastiff').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/leonberg/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-leonberger').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/newfoundland/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-newfoundland').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/mountain/bernese/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-bernese').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/malamute/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-alaskanmalamute').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/stbernard/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-saintbernard').src = data.message;
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Encyklopedia Psów</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Średnie Psy - Encyklopedia Psów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Encyklopedia Psów</h1>
+        <h2>Średnie psy</h2>
+        <nav class="size-tabs">
+            <a class="tab" href="male.html">małe psy</a>
+            <a class="tab" href="srednie.html">średnie psy</a>
+            <a class="tab" href="duze.html">duże psy</a>
+        </nav>
+    </header>
+    <main>
+        <p>Tu znajdziesz informacje o średnich rasach psów.</p>
+        <section class="breed-section">
+            <img id="dog-image-bulldog" src="" alt="Bulldog" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Buldog angielski</h3>
+            <p><strong>Opis:</strong> Buldog angielski to pies o krępej budowie, spokojny i bardzo przywiązany do rodziny. Jest łagodny i cierpliwy wobec dzieci.</p>
+            <p><strong>Ciekawostka:</strong> Dawniej buldogi były wykorzystywane do walk z bykami.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-samoyed" src="" alt="Samoyed" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Samoyed</h3>
+            <p><strong>Opis:</strong> Samoyed to pies o śnieżnobiałej sierści, bardzo przyjazny i łagodny. Słynie z charakterystycznego "uśmiechu".</p>
+            <p><strong>Ciekawostka:</strong> Samoyedy były wykorzystywane przez ludy Syberii do ciągnięcia sań i pilnowania stad.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-beagle" src="" alt="Beagle" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Beagle</h3>
+            <p><strong>Opis:</strong> Beagle to wesoły, przyjacielski i bardzo energiczny pies gończy. Jest znany z doskonałego węchu i łagodnego charakteru.</p>
+            <p><strong>Ciekawostka:</strong> Beagle są często wykorzystywane na lotniskach do wykrywania nielegalnych substancji dzięki swojemu wyczulonemu węchowi.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-kerryblue" src="" alt="Kerry Blue Terrier" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Kerry Blue Terrier</h3>
+            <p><strong>Opis:</strong> Kerry Blue Terrier to energiczny, inteligentny i bardzo lojalny pies. Ma charakterystyczną niebieskawą sierść.</p>
+            <p><strong>Ciekawostka:</strong> Sierść Kerry Blue Terriera zmienia kolor z czarnego na niebieskawy w miarę dorastania.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-whippet" src="" alt="Whippet" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Whippet</h3>
+            <p><strong>Opis:</strong> Whippet to smukły, szybki i bardzo łagodny pies. Jest doskonałym towarzyszem rodziny i uwielbia bieganie.</p>
+            <p><strong>Ciekawostka:</strong> Whippety potrafią osiągać prędkość nawet do 60 km/h!</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-boxer" src="" alt="Boxer" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Boxer</h3>
+            <p><strong>Opis:</strong> Boxer to energiczny, wesoły i bardzo lojalny pies rodzinny. Jest inteligentny, odważny i uwielbia zabawę.</p>
+            <p><strong>Ciekawostka:</strong> Boxery są znane z charakterystycznego sposobu zabawy przednimi łapami, przypominającego boksowanie.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-kelpie" src="" alt="Australian Kelpie" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Australian Kelpie</h3>
+            <p><strong>Opis:</strong> Australian Kelpie to bardzo pracowity, inteligentny i wytrzymały pies pasterski. Słynie z doskonałej kondycji i chęci do pracy.</p>
+            <p><strong>Ciekawostka:</strong> Kelpies potrafią samodzielnie zaganiać stada owiec na ogromnych australijskich farmach.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-bordercollie" src="https://images.dog.ceo/breeds/border-collie/n02106166_3552.jpg" alt="Border Collie" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Border Collie</h3>
+            <p><strong>Opis:</strong> Border Collie to bardzo inteligentny, energiczny i pracowity pies pasterski. Słynie z niezwykłej zdolności do nauki i posłuszeństwa.</p>
+            <p><strong>Ciekawostka:</strong> Border Collie uważany jest za najinteligentniejszą rasę psa na świecie.</p>
+        </section>
+        <!-- Przywrócono kod bez zmian w sekcjach i fetch dla innych psów. -->
+        <script>
+        fetch('https://dog.ceo/api/breed/bulldog/english/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-bulldog').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/samoyed/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-samoyed').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/beagle/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-beagle').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/terrier/kerryblue/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-kerryblue').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/whippet/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-whippet').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/boxer/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-boxer').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/kelpie/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-kelpie').src = data.message;
+            });
+        // Border Collie nie jest obsługiwany przez API dog.ceo, zostaje statyczny link
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Encyklopedia Psów</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
