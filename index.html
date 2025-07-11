@@ -7,16 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="sidebar-toggle" title="Menu" tabindex="0">
+        <span>&#9776;</span>
+    </div>
+    <nav id="sidebar" class="sidebar-collapsed">
+        <ul>
+            <li><a href="imiona.html">Najpopularniejsze imiona dla psów</a></li>
+            <li><a href="imiona-zagranica.html">Najpopularniejsze imiona dla psów za granicą</a></li>
+            <li><a href="agresywne.html">Agresywne rasy psów</a></li>
+            <!-- Tu dodasz kolejne strony w przyszłości -->
+        </ul>
+    </nav>
     <header>
+        <a href="index.html" class="home-icon" title="Strona główna">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 3l9 9"/><path d="M9 21V9h6v12"/></svg>
+        </a>
         <h1>Encyklopedia Psów</h1>
         <h2>Wszystko o rasach psów</h2>
         <nav class="size-tabs">
             <a class="tab" id="tab-maly" href="male.html">małe psy</a>
             <a class="tab" id="tab-sredni" href="srednie.html">średnie psy</a>
             <a class="tab" id="tab-duzy" href="duze.html">duże psy</a>
+            <!-- <a class="tab" id="tab-agresywne" href="agresywne.html">agresywne rasy psów</a> -->
         </nav>
     </header>
     <main>
+        <p>
+          Witamy w <strong>Encyklopedii Psów</strong> – miejscu stworzonym z miłości do czworonożnych przyjaciół! 🐾<br>
+          Znajdziesz tu opisy najpopularniejszych ras psów z całego świata, ciekawostki, a także piękne zdjęcia, które oddają ich niezwykły charakter.<br><br>
+          Niezależnie od tego, czy szukasz idealnego towarzysza, czy po prostu kochasz psy – jesteś we właściwym miejscu. 
+          Zanurz się w świecie psiej różnorodności i poznaj bliżej najlepszych przyjaciół człowieka!
+        </p>
+        <button id="random-dog-btn" style="margin: 24px 0 16px 0; padding: 12px 28px; font-size: 1.1rem; border-radius: 8px; border: none; background: #4e7cff; color: #fff; cursor: pointer; box-shadow: 0 2px 8px #ccd; transition: background 0.2s;">Pokaż losowego psa</button>
+        <div id="random-dog-result" style="margin-bottom: 32px;"></div>
+        <section class="naming-inspiration" style="margin: 32px 0 24px 0; padding: 20px 24px; background: #f7f9ff; border-radius: 12px; box-shadow: 0 2px 8px #e0e4ee;">
+          <h3 style="margin-top:0;">Czym można się inspirować, wymyślając imię dla psa?</h3>
+          <p>Jeśli nie masz pomysłu, jak nazwać psa – szczeniaka lub dorosłego po adopcji – rozejrzyj się wokół. W otaczającym cię środowisku możesz znaleźć świetne inspiracje. Imiona dla psa mogą być wymyślone na podstawie naszych hobby, lubianych przez nas przedmiotów, filmów, postaci filmowych, bajek, literatury czy zagranicznych podróży.</p>
+        </section>
+        <section class="naming-section" style="margin:48px 0 32px 0; padding:24px 18px; background:#f8f8fa; border-radius:14px; box-shadow:0 2px 10px #eee;">
+          <h2 style="text-align:center;">Jak wybrać imię dla psa?</h2>
+          <p style="font-size:1.08rem; line-height:1.7; text-align:justify; max-width:820px; margin:0 auto 12px auto;">Wybór imienia dla psa to ważna sprawa. Będziesz go przecież używać wiele razy każdego dnia!</p>
+          <p style="font-size:1.08rem; line-height:1.7; text-align:justify; max-width:820px; margin:0 auto;">Wielu psiarzom wybór imienia dla psa sprawia niemały kłopot. Jest to niewątpliwie ważna sprawa, która na samym wyborze się nie kończy. Pies musi bowiem wiedzieć, że to nie jest żadna kolejna komenda, a tak się nazywa. Szkoleniowcy mówią, że sporo ich czworołapych uczniów przyprowadzanych na zajęcia… nie ma pojęcia, jak ma na imię. Znają za to słowo klucz: „masz!”, którym ich właściciele się posługują, usiłując przywabić pupili na spacerach. Cóż, to całkiem możliwe: wydaje nam się, że nasz pies od razu rozumie, jak go nazwaliśmy, gdy tymczasem to dla niego tylko słowo, którego – obok wielu – używamy w jego obecności. Dlatego, żeby nasz czworonóg nie został do końca życia „Maszem”, lepiej zaraz na początku nauczyć go, że Burek, Saba czy Reksio to on. Można wielokrotnie przywoływać go w domu i nagradzać za podejście, zaś zwracając się do niego, zawsze najpierw wymieniać jego imię.</p>
+        </section>
+        <section class="popculture-names" style="margin: 32px 0 24px 0; padding: 0; background: #f3f6fa; border-radius: 12px; box-shadow: 0 2px 8px #e0e4ee; display: flex; align-items: stretch; flex-wrap: wrap; min-height: 220px;">
+          <div style="flex: 1 1 520px; min-width: 320px; max-width: 700px; padding: 28px 32px; text-align: justify; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="margin-top:0;">Psy w popkulturze</h3>
+            <p>Masz ulubiony film lub serial? Kino może być źródłem fajnych imion dla psów. Najczęściej nazywamy swoje czworonogi przydomkami lub imionami głównych lub pobocznych postaci filmowych. Jesteś miłośnikiem serii „Gra o tron” albo uniwersum Marvela? Może więc twojemu psu będą pasować któreś z tych imion: <b>Cersei, Tyrion, Daenerys, Sansa, Arya</b> bądź <b>Marvel, Thor, Loki</b> czy <b>Wanda</b>? Inspirację odnajdą także fani animacji. Nie muszą to być stricte imiona bajkowych suczek i psów, choć to właśnie na nie najczęściej się decydujemy. <b>Sid, Pluto, Simba, Chojrak, Yzma, Olaf, Elsa, Gru, a może Goofy?</b> To imiona oryginalne, nieco fantazyjne, ale te filmowe i bajkowe bywają najładniejsze – np. <b>Nala, Bambi, Emma, Fiona, Frida, Jaskier</b> czy <b>Lola</b>. Pamiętajmy też, że to, co chwilowo jest modne, za kilka lat może być całkowicie nieciekawe. Dlatego wybierając imiona dla psa z bajek, opieraj się na klasykach animacji, które wpisały się do kanonu kinematografii i wywołują nostalgię. Oczywiście może tak być, że popularne filmy czy seriale animowane szybko ugruntują się na wysokiej pozycji obok klasyki.</p>
+            <p>Bogata w inspirację jest także literatura, zarówno dawna, jak i nowa. Ciekawe pomysły na imiona odnajdziesz między innymi w serii książek o Harrym Potterze, szczególnie jeśli jesteś miłośnikiem przygód tego czarodzieja. Świat Hogwartu bywa inspirujący! Nie zapominajmy o rodzimej literaturze, która jest również bogatym źródłem pomysłów na imię dla psa. Podobnie jak pozycje historyczne i mitologia.</p>
+            <p><b>Hiszpańskie, włoskie, japońskie, a może angielskie imiona dla psa?</b><br>
+            Zagraniczne imiona, choć bywają piękne, oryginalne i ciekawe, mogą być ryzykowne. Dlaczego? Problem może tkwić nie tylko w ich wymowie, lecz także prawdziwym znaczeniu. Musimy być w pełni pewni, co oznacza zasłyszane na wakacjach słowo, które nam się spodobało i które chcielibyśmy nadać swojemu psu jako imię. Najbardziej ryzykowne są języki azjatyckie.</p>
+            <p>Przykładowe ciekawe angielskie imiona dla psa: <b>Zoey, Lucy, Blu, Peach, Apple, Daisy</b></p>
+          </div>
+          <div style="flex: 0 1 340px; min-width: 220px; max-width: 420px; display: flex; align-items: center; justify-content: center; padding: 16px;">
+            <img id="dog-image-popkultura" src="" alt="Dog niemiecki - dumny pies" style="width:100%; max-width:380px; min-width:180px; height:auto; border-radius: 14px; box-shadow: 0 2px 12px #ccd; object-fit:cover; background:#eee;">
+          </div>
+        </section>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          fetch('https://dog.ceo/api/breed/dane/images/random')
+            .then(response => response.json())
+            .then(data => {
+              document.getElementById('dog-image-popkultura').src = data.message;
+            });
+        });
+        </script>
         <p>Witamy w Encyklopedii Psów! Tutaj znajdziesz informacje o różnych rasach psów.</p>
         <!-- Tutaj będą pojawiać się sekcje z rasami psów w zależności od wybranej zakładki -->
     </main>

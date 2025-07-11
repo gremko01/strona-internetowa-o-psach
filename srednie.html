@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="sidebar-toggle" title="Menu" tabindex="0">
+        <span>&#9776;</span>
+    </div>
+    <nav id="sidebar" class="sidebar-collapsed">
+        <ul>
+            <li><a href="imiona.html">Najpopularniejsze imiona dla psów</a></li>
+            <li><a href="imiona-zagranica.html">Najpopularniejsze imiona dla psów za granicą</a></li>
+            <li><a href="agresywne.html">Agresywne rasy psów</a></li>
+            <!-- Tu dodasz kolejne strony w przyszłości -->
+        </ul>
+    </nav>
     <header>
+        <a href="index.html" class="home-icon" title="Strona główna">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 3l9 9"/><path d="M9 21V9h6v12"/></svg>
+        </a>
         <h1>Encyklopedia Psów</h1>
         <h2>Średnie psy</h2>
         <nav class="size-tabs">
@@ -73,7 +87,20 @@
             <p><strong>Opis:</strong> Border Collie to bardzo inteligentny, energiczny i pracowity pies pasterski. Słynie z niezwykłej zdolności do nauki i posłuszeństwa.</p>
             <p><strong>Ciekawostka:</strong> Border Collie uważany jest za najinteligentniejszą rasę psa na świecie.</p>
         </section>
-        <!-- Przywrócono kod bez zmian w sekcjach i fetch dla innych psów. -->
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-husky" src="" alt="Siberian Husky" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Siberian Husky</h3>
+            <p><strong>Opis:</strong> Siberian Husky to energiczny, wytrzymały pies zaprzęgowy o pięknych niebieskich oczach. Jest przyjacielski i bardzo towarzyski.</p>
+            <p><strong>Ciekawostka:</strong> Husky potrafią biegać na bardzo długich dystansach w trudnych warunkach śnieżnych.</p>
+        </section>
+        <hr class="breed-divider">
+        <section class="breed-section">
+            <img id="dog-image-dalmatian" src="" alt="Dalmatyńczyk" style="max-width:300px; width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px #ccc;">
+            <h3>Dalmatyńczyk (Dalmatian)</h3>
+            <p><strong>Opis:</strong> Dalmatyńczyk to pies o charakterystycznej, cętkowanej sierści. Jest energiczny, inteligentny i bardzo lojalny.</p>
+            <p><strong>Ciekawostka:</strong> Dalmatyńczyki są znane z filmu "101 Dalmatyńczyków".</p>
+        </section>
         <script>
         fetch('https://dog.ceo/api/breed/bulldog/english/images/random')
             .then(response => response.json())
@@ -85,10 +112,30 @@
             .then(data => {
                 document.getElementById('dog-image-samoyed').src = data.message;
             });
+        fetch('https://dog.ceo/api/breed/corgi/cardigan/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-corgi').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/bulldog/french/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-frenchbulldog').src = data.message;
+            });
         fetch('https://dog.ceo/api/breed/beagle/images/random')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('dog-image-beagle').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/cocker/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-cocker').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/schnauzer/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-schnauzer').src = data.message;
             });
         fetch('https://dog.ceo/api/breed/terrier/kerryblue/images/random')
             .then(response => response.json())
@@ -109,6 +156,16 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('dog-image-kelpie').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/husky/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-husky').src = data.message;
+            });
+        fetch('https://dog.ceo/api/breed/dalmatian/images/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dog-image-dalmatian').src = data.message;
             });
         // Border Collie nie jest obsługiwany przez API dog.ceo, zostaje statyczny link
         </script>
